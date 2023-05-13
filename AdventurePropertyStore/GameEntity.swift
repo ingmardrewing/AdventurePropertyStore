@@ -12,13 +12,22 @@ class GameEntity :Equatable {
     let name : String
     let id : String
     
+    static func == (lhs: GameEntity, rhs: GameEntity) -> Bool {
+        lhs.id == rhs.id
+    }
+    
     init(name: String, id: String) {
         self.name = name
         self.id = id
     }
     
-    static func == (lhs: GameEntity, rhs: GameEntity) -> Bool {
-        lhs.id == rhs.id
+    func createInitialProperty (valueType:ValueType, valueAmount:Int) {
+        PropertyStore.addProperty(
+            valueType: valueType,
+            valueAmount: valueAmount,
+            durationType: .Eternal,
+            durationAmount: 1,
+            targets: self)
     }
     
     func getPropertyValue(valueType: ValueType) -> Int  {
@@ -28,6 +37,8 @@ class GameEntity :Equatable {
     func getDescriptionContents() -> [DescriptionContent] {
         self.getDescriptionCollector().descriptionContents
     }
+    
+    
     
     private func getDescriptionCollector() -> DescriptionCollector {
         let descriptionCollector = DescriptionCollector(target: self)
@@ -41,14 +52,7 @@ class GameEntity :Equatable {
         return descriptor
     }
     
-    func createInitialProperty (valueType:ValueType, valueAmount:Int) {
-        PropertyStore.addProperty(
-            valueType: valueType,
-            valueAmount: valueAmount,
-            durationType: .Eternal,
-            durationAmount: 1,
-            targets: self)
-    }
+
 }
 
 class PropertyCollector {
