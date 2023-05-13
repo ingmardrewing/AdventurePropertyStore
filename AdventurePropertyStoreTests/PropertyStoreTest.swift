@@ -42,11 +42,11 @@ final class PropertyStoreTest: XCTestCase {
         let pippin = GameEntity(name: "Pippin", id: "npc02")
         pippin.createInitialProperty(valueType: .Dexterity, valueAmount: 18)
         
-        XCTAssertTrue(pippin.getPropertyValue(valueType: .Dexterity) == 18)
+        XCTAssertEqual(pippin.getPropertyValue(valueType: .Dexterity), 18)
         
-        PropertyStore.addProperty(valueType: .Dexterity, valueAmount: -1, durationType: .Limited, durationAmount: 1, targets: pippin)
+        PropertyStore.addProperty(valueType: .Dexterity, valueAmount: 1, durationType: .Limited, durationAmount: 1, targets: pippin)
                 
-        XCTAssertEqual(pippin.getPropertyValue(valueType: .Dexterity), 17)
+        XCTAssertEqual(pippin.getPropertyValue(valueType: .Dexterity), 19)
         
         PropertyStore.endTurn()
         

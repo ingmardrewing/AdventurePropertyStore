@@ -14,13 +14,13 @@ class DescriptionStore {
         descriptions.append(description)
     }
     
-    static func visitedBy(ged: GameEntityDescriptor){
+    static func visitedBy(descriptionCollector: DescriptionCollector){
         descriptions
             .filter{
-                $0.target == ged.target
+                $0.target == descriptionCollector.target
             }
             .forEach {
-                $0.visitedBy(ged: ged)
+                $0.visitedBy(descriptionCollector: descriptionCollector)
             }
     }
 }
@@ -54,9 +54,9 @@ class Description {
         return true
     }
 
-    func visitedBy (ged: GameEntityDescriptor) {
+    func visitedBy (descriptionCollector: DescriptionCollector) {
         if(evaluate()){
-            ged.addDescriptionContent(descriptionContent: content)
+            descriptionCollector.addDescriptionContent(descriptionContent: content)
         }
     }
 }

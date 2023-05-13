@@ -22,19 +22,22 @@ class GameEntity :Equatable {
     }
     
     func getPropertyValue(valueType: ValueType) -> Int  {
-        self.getDescriptor().getPropertyValueFor(valueType: valueType)
+        self.getPropertyCollector().getPropertyValueFor(valueType: valueType)
     }
     
     func getDescriptionContents() -> [DescriptionContent] {
-        self.getDescriptor().descriptionContents
+        self.getDescriptionCollector().descriptionContents
     }
     
-    private func getDescriptor () -> GameEntityDescriptor {
-        let descriptor = GameEntityDescriptor(target: self)
-        
+    private func getDescriptionCollector() -> DescriptionCollector {
+        let descriptionCollector = DescriptionCollector(target: self)
+        DescriptionStore.visitedBy(descriptionCollector: descriptionCollector)
+        return descriptionCollector
+    }
+    
+    private func getPropertyCollector () -> PropertyCollector {
+        let descriptor = PropertyCollector(target: self)
         PropertyStore.visitedBy(descriptor: descriptor)
-        DescriptionStore.visitedBy(ged: descriptor)
-        
         return descriptor
     }
     
@@ -48,10 +51,9 @@ class GameEntity :Equatable {
     }
 }
 
-class GameEntityDescriptor {
+class PropertyCollector {
     let target :GameEntity
     var properties : [Property] = []
-    var descriptionContents : [DescriptionContent] = []
 
     init(target: GameEntity) {
         self.target = target
@@ -61,17 +63,25 @@ class GameEntityDescriptor {
         properties.append(property)
     }
     
-    func addDescriptionContent (descriptionContent: DescriptionContent){
-        descriptionContents.append(descriptionContent)
-    }
-    
     func getPropertyValueFor(valueType:ValueType) -> Int {
         return properties
             .filter{$0.value.type == valueType}
             .reduce(0) {$0 + $1.value.amount}
     }
-    
-    func getDescriptionContents() -> [DescriptionContent] {
-        return descriptionContents
+}
+
+
+class DescriptionCollector {
+    let target :GameEntity
+    var descriptionContents : [DescriptionContent] = []
+
+    init(target: GameEntity) {
+        self.target = target
     }
+    
+    func addDescriptionContent (descriptionContent: DescriptionContent){
+        descriptionContents.append(descriptionContent)
+    }
+    
+    
 }

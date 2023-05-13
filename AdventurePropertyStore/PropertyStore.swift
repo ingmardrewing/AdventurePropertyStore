@@ -42,7 +42,7 @@ class PropertyStore {
         properties.append(p)
     }
     
-    static func visitedBy (descriptor: GameEntityDescriptor) {
+    static func visitedBy (descriptor: PropertyCollector) {
         PropertyStore.properties.forEach {
             $0.visitedBy(ged: descriptor)
         }
@@ -83,7 +83,7 @@ struct Property {
     var value : Value
     var duration : Duration
     
-    func visitedBy (ged: GameEntityDescriptor){
+    func visitedBy (ged: PropertyCollector){
         if(self.targets.contains(where: {$0.value == ged.target})) {
             ged.addProperty(property: self)
         }

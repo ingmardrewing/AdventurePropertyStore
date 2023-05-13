@@ -13,20 +13,25 @@ final class DescripitionTest: XCTestCase {
         let legolas = GameEntity(name: "legolas", id: "npc01")
         legolas.createInitialProperty(valueType: .Dexterity, valueAmount: 18)
         let description = Description(
-            conditions: [Condition(.Dexterity,.equalTo,18)],
+            conditions: [Condition(.Dexterity,.equalTo,19)],
             content: DescriptionContent(
-                text: "Test",
+                text: "Test text",
                 image: "img01",
                 imageText: "image text",
                 vignette: "img02"),
             target: legolas)
-        XCTAssertTrue(description.evaluate())
+        XCTAssertFalse(description.evaluate())
         
         DescriptionStore.add(description: description)
         XCTAssertEqual(DescriptionStore.descriptions.count, 1)
         
-        let dc = legolas.getDescriptionContents().first
-        XCTAssertEqual(dc?.text, "trt")
+        var firstDescriptionContent = legolas.getDescriptionContents().first
+        XCTAssertNil(firstDescriptionContent)
+        
+        PropertyStore.addProperty(valueType: .Dexterity, valueAmount: 1, durationType: .Limited, durationAmount: 1, targets: legolas)
+        
+        firstDescriptionContent = legolas.getDescriptionContents().first
+        XCTAssertNotNil(firstDescriptionContent)
     }
     
     
