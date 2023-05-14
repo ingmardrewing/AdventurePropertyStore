@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		214DED142A10257F0005A176 /* ExperienceStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214DED132A10257F0005A176 /* ExperienceStore.swift */; };
+		214DED152A10C34D0005A176 /* ExperienceStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214DED132A10257F0005A176 /* ExperienceStore.swift */; };
 		956E091229FD0D3700133553 /* AdventurePropertyStoreApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956E091129FD0D3700133553 /* AdventurePropertyStoreApp.swift */; };
 		956E091429FD0D3700133553 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956E091329FD0D3700133553 /* Persistence.swift */; };
 		956E091729FD0D3700133553 /* AdventurePropertyStore.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 956E091529FD0D3700133553 /* AdventurePropertyStore.xcdatamodeld */; };
@@ -26,7 +28,7 @@
 		956E095229FF929600133553 /* Conditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956E094E29FF91ED00133553 /* Conditions.swift */; };
 		956E095429FF960600133553 /* DescriptionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956E095329FF960600133553 /* DescriptionTest.swift */; };
 		956E095529FF964200133553 /* Description.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956E094C29FD427900133553 /* Description.swift */; };
-		95FEBF0F2A0F70AE00303C67 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FEBF0E2A0F70AE00303C67 /* File.swift */; };
+		95FEBF0F2A0F70AE00303C67 /* ExperienceStoreTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FEBF0E2A0F70AE00303C67 /* ExperienceStoreTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		214DED132A10257F0005A176 /* ExperienceStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperienceStore.swift; sourceTree = "<group>"; };
 		956E090E29FD0D3700133553 /* AdventurePropertyStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AdventurePropertyStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		956E091129FD0D3700133553 /* AdventurePropertyStoreApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdventurePropertyStoreApp.swift; sourceTree = "<group>"; };
 		956E091329FD0D3700133553 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -66,7 +69,7 @@
 		956E094E29FF91ED00133553 /* Conditions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conditions.swift; sourceTree = "<group>"; };
 		956E095029FF923100133553 /* ConditionsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionsTest.swift; sourceTree = "<group>"; };
 		956E095329FF960600133553 /* DescriptionTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionTest.swift; sourceTree = "<group>"; };
-		95FEBF0E2A0F70AE00303C67 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		95FEBF0E2A0F70AE00303C67 /* ExperienceStoreTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperienceStoreTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +131,7 @@
 				956E094E29FF91ED00133553 /* Conditions.swift */,
 				956E094C29FD427900133553 /* Description.swift */,
 				956E094129FD0D7300133553 /* PropertyStore.swift */,
+				214DED132A10257F0005A176 /* ExperienceStore.swift */,
 			);
 			path = AdventurePropertyStore;
 			sourceTree = "<group>";
@@ -146,7 +150,7 @@
 				956E094A29FD3B7100133553 /* PropertyStoreTest.swift */,
 				956E095029FF923100133553 /* ConditionsTest.swift */,
 				956E095329FF960600133553 /* DescriptionTest.swift */,
-				95FEBF0E2A0F70AE00303C67 /* File.swift */,
+				95FEBF0E2A0F70AE00303C67 /* ExperienceStoreTest.swift */,
 			);
 			path = AdventurePropertyStoreTests;
 			sourceTree = "<group>";
@@ -291,6 +295,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				956E094D29FD427900133553 /* Description.swift in Sources */,
+				214DED142A10257F0005A176 /* ExperienceStore.swift in Sources */,
 				956E094F29FF91ED00133553 /* Conditions.swift in Sources */,
 				956E094229FD0D7300133553 /* PropertyStore.swift in Sources */,
 				956E094629FD109800133553 /* GameEntity.swift in Sources */,
@@ -310,9 +315,10 @@
 				956E094829FD28E600133553 /* PropertyStore.swift in Sources */,
 				956E094729FD28E200133553 /* GameEntity.swift in Sources */,
 				956E095529FF964200133553 /* Description.swift in Sources */,
-				95FEBF0F2A0F70AE00303C67 /* File.swift in Sources */,
+				95FEBF0F2A0F70AE00303C67 /* ExperienceStoreTest.swift in Sources */,
 				956E094B29FD3B7100133553 /* PropertyStoreTest.swift in Sources */,
 				956E095129FF923100133553 /* ConditionsTest.swift in Sources */,
+				214DED152A10C34D0005A176 /* ExperienceStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

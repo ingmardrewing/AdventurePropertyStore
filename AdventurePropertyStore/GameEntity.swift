@@ -21,6 +21,7 @@ class GameEntity :Equatable {
         self.id = id
     }
     
+    // Properties
     func createInitialProperty (valueType:ValueType, valueAmount:Int) {
         PropertyStore.addProperty(
             valueType: valueType,
@@ -34,23 +35,33 @@ class GameEntity :Equatable {
         self.getPropertyCollector().getPropertyValueFor(valueType: valueType)
     }
     
-    func getDescriptionContents() -> [DescriptionContent] {
-        self.getDescriptionCollector().descriptionContents
+    private func getPropertyCollector () -> PropertyCollector {
+        let descriptor = PropertyCollector(target: self)
+        PropertyStore.visitedBy(descriptor: descriptor)
+        return descriptor
+    }
+    
+    // Experience
+    func addExperience(experienceTag :String) {
+        ExperienceStore.addExperience(gameEntity: self, experience: experienceTag)
+    }
+    
+    func hasExperience(experienceTag :String) -> Bool {
+        ExperienceStore.experienced(gameEntity: self, experience: experienceTag)
     }
     
     
+    // Desriptions
+    func getDescriptionContents() -> [DescriptionContent] {
+        self.getDescriptionCollector().descriptionContents
+    }
     
     private func getDescriptionCollector() -> DescriptionCollector {
         let descriptionCollector = DescriptionCollector(target: self)
         DescriptionStore.visitedBy(descriptionCollector: descriptionCollector)
         return descriptionCollector
     }
-    
-    private func getPropertyCollector () -> PropertyCollector {
-        let descriptor = PropertyCollector(target: self)
-        PropertyStore.visitedBy(descriptor: descriptor)
-        return descriptor
-    }
+
     
 
 }

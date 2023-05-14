@@ -61,7 +61,7 @@ class Weak<T: AnyObject> {
 }
 
 enum ValueType :Equatable {
-    case Strength, Intelligence, Dexterity
+    case Health, Strength, Intelligence, Dexterity, Experience
 }
 
 struct Value {
