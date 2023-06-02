@@ -11,6 +11,8 @@ class GameEntity :Equatable {
     
     let name : String
     let id : String
+    var properties :[Property] = []
+    var descriptions :[DescriptionContent] = []
     
     static func == (lhs: GameEntity, rhs: GameEntity) -> Bool {
         lhs.id == rhs.id
@@ -19,6 +21,14 @@ class GameEntity :Equatable {
     init(name: String, id: String) {
         self.name = name
         self.id = id
+    }
+    
+    func updatePropertiesForReading () {
+        self.properties = getPropertyCollector().getProperties()
+    }
+    
+    func updateDescriptions () {
+        self.descriptions = getDescriptionContents()
     }
     
     // Properties
@@ -32,13 +42,15 @@ class GameEntity :Equatable {
     }
     
     func getPropertyValue(valueType: ValueType) -> Int  {
-        self.getPropertyCollector().getPropertyValueFor(valueType: valueType)
+        return properties
+            .filter{$0.value.type == valueType}
+            .reduce(0) {$0 + $1.value.amount}
     }
     
     private func getPropertyCollector () -> PropertyCollector {
-        let descriptor = PropertyCollector(target: self)
-        PropertyStore.visitedBy(descriptor: descriptor)
-        return descriptor
+        let collector = PropertyCollector(target: self)
+        PropertyStore.visitedBy(collector: collector)
+        return collector
     }
     
     // Experience
@@ -51,7 +63,7 @@ class GameEntity :Equatable {
     }
     
     
-    // Desriptions
+    // Descriptions
     func getDescriptionContents() -> [DescriptionContent] {
         self.getDescriptionCollector().descriptionContents
     }
@@ -61,9 +73,6 @@ class GameEntity :Equatable {
         DescriptionStore.visitedBy(descriptionCollector: descriptionCollector)
         return descriptionCollector
     }
-
-    
-
 }
 
 class PropertyCollector {
@@ -82,6 +91,10 @@ class PropertyCollector {
         return properties
             .filter{$0.value.type == valueType}
             .reduce(0) {$0 + $1.value.amount}
+    }
+    
+    func getProperties() -> [Property] {
+        return self.properties
     }
 }
 

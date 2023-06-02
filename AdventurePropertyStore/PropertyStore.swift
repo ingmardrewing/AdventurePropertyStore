@@ -42,9 +42,9 @@ class PropertyStore {
         properties.append(p)
     }
     
-    static func visitedBy (descriptor: PropertyCollector) {
+    static func visitedBy (collector: PropertyCollector) {
         PropertyStore.properties.forEach {
-            $0.visitedBy(ged: descriptor)
+            $0.visitedBy(collector: collector)
         }
     }
     
@@ -54,9 +54,9 @@ class PropertyStore {
 }
 
 class Weak<T: AnyObject> {
-  weak var value : T?
+  weak var referencedEntity : T?
   init (value: T) {
-    self.value = value
+    self.referencedEntity = value
   }
 }
 
@@ -83,9 +83,10 @@ struct Property {
     var value : Value
     var duration : Duration
     
-    func visitedBy (ged: PropertyCollector){
-        if(self.targets.contains(where: {$0.value == ged.target})) {
-            ged.addProperty(property: self)
+    func visitedBy (collector: PropertyCollector){
+        if(self.targets.contains(where: {$0.referencedEntity == collector.target})) {
+            print("xxxx")
+            collector.addProperty(property: self)
         }
     }
 }

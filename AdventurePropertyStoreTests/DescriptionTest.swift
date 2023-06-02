@@ -45,9 +45,6 @@ final class DescripitionTest: XCTestCase {
         
         PropertyStore.addProperty(valueType: .Dexterity, valueAmount: 1, durationType: .Limited, durationAmount: 1, targets: legolas)
         
-        firstDescriptionContent = legolas.getDescriptionContents().first
-        XCTAssertNotNil(firstDescriptionContent)
-        
         legolas.addExperience(experienceTag: "is battle worn")
         
         XCTAssertEqual(legolas.getDescriptionContents().count, 1)
@@ -55,7 +52,7 @@ final class DescripitionTest: XCTestCase {
         PropertyStore.addProperty(valueType: .Health, valueAmount: -16, durationType: .Limited, durationAmount: 1, targets: legolas)
         XCTAssertEqual(DescriptionStore.descriptions.count, 2)
 
+        let desctxt = legolas.getDescriptionContents()[0].text
+        XCTAssertEqual(desctxt, "Legolas returns from the battle against the orcs")
     }
-    
-    
 }

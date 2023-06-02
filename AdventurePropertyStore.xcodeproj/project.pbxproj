@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		214DED142A10257F0005A176 /* ExperienceStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214DED132A10257F0005A176 /* ExperienceStore.swift */; };
 		214DED152A10C34D0005A176 /* ExperienceStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214DED132A10257F0005A176 /* ExperienceStore.swift */; };
+		21DE1CDE2A237A3A00629C6A /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DE1CDD2A237A3A00629C6A /* Game.swift */; };
 		956E091229FD0D3700133553 /* AdventurePropertyStoreApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956E091129FD0D3700133553 /* AdventurePropertyStoreApp.swift */; };
 		956E091429FD0D3700133553 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956E091329FD0D3700133553 /* Persistence.swift */; };
 		956E091729FD0D3700133553 /* AdventurePropertyStore.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 956E091529FD0D3700133553 /* AdventurePropertyStore.xcdatamodeld */; };
@@ -50,6 +51,7 @@
 
 /* Begin PBXFileReference section */
 		214DED132A10257F0005A176 /* ExperienceStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperienceStore.swift; sourceTree = "<group>"; };
+		21DE1CDD2A237A3A00629C6A /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		956E090E29FD0D3700133553 /* AdventurePropertyStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AdventurePropertyStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		956E091129FD0D3700133553 /* AdventurePropertyStoreApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdventurePropertyStoreApp.swift; sourceTree = "<group>"; };
 		956E091329FD0D3700133553 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 				956E091529FD0D3700133553 /* AdventurePropertyStore.xcdatamodeld */,
 				956E091D29FD0D3800133553 /* Preview Content */,
 				956E094529FD109800133553 /* GameEntity.swift */,
+				21DE1CDD2A237A3A00629C6A /* Game.swift */,
 				956E094E29FF91ED00133553 /* Conditions.swift */,
 				956E094C29FD427900133553 /* Description.swift */,
 				956E094129FD0D7300133553 /* PropertyStore.swift */,
@@ -295,6 +298,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				956E094D29FD427900133553 /* Description.swift in Sources */,
+				21DE1CDE2A237A3A00629C6A /* Game.swift in Sources */,
 				214DED142A10257F0005A176 /* ExperienceStore.swift in Sources */,
 				956E094F29FF91ED00133553 /* Conditions.swift in Sources */,
 				956E094229FD0D7300133553 /* PropertyStore.swift in Sources */,

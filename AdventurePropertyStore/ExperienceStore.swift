@@ -11,6 +11,9 @@ class ExperienceStore {
     static var experiences : [Experience] = []
     
     static func addExperience(gameEntity:GameEntity, experience :String) {
+        if (gameEntity.hasExperience(experienceTag: experience)){
+            return
+        }
         experiences.append(Experience(gameEntity: gameEntity, experience: experience))
     }
     

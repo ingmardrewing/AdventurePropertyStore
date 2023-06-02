@@ -15,6 +15,7 @@ final class ConditionsTest: XCTestCase {
         legolas.createInitialProperty(valueType: .Dexterity, valueAmount: 18)
         legolas.addExperience(experienceTag: "attended Elrond's Council")
         let condition = Condition(.Dexterity, .equalTo, 18)
+        legolas.updatePropertiesForReading()
         
         XCTAssertTrue(condition.evaluate(gameEntity: legolas))
     

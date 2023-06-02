@@ -8,16 +8,28 @@
 import XCTest
 
 final class ExperienceStoreTest: XCTestCase {
-    /*
+    
     func testNoExperience() throws {
         let legolas = GameEntity(name: "Legolas", id: "npc01")
-        XCTAssertTrue(legolas.getExperience(valueType: .Dexterity) == 0)
+                
+        XCTAssertFalse(legolas.hasExperience(experienceTag: "the void"))
     }
+    
     
     func testAddExperience() throws {
         let legolas = GameEntity(name: "Legolas", id: "npc01")
-        legolas.createInitialProperty(valueType: .Dexterity, valueAmount: 18)
-        XCTAssertTrue(legolas.getPropertyValue(valueType: .Dexterity) == 18)
+        let experienceItem = "visited room 201"
+        
+        XCTAssertEqual(ExperienceStore.experiences.count, 0)
+        
+        legolas.addExperience(experienceTag: experienceItem)
+        
+        XCTAssertTrue(legolas.hasExperience(experienceTag: experienceItem))
+        XCTAssertEqual(ExperienceStore.experiences.count, 1)
+        
+        legolas.addExperience(experienceTag: experienceItem)
+        XCTAssertEqual(ExperienceStore.experiences.count, 1)
+
+        
     }
-    */
 }
