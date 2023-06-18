@@ -10,6 +10,14 @@ import Foundation
 class PropertyStore {
     static var properties : [Property] = []
     
+    static func clearAll () {
+        PropertyStore.properties = []
+    }
+    
+    /**
+     * Reduces the duration integer on each limited property,
+     * so that effects, that are only active for a limited timespan, actually wear off.
+     */
     static func endTurn () {
         properties = properties
             .map {
@@ -47,10 +55,7 @@ class PropertyStore {
             $0.visitedBy(collector: collector)
         }
     }
-    
-    static func list() -> String {
-        return "Nr. of properties: \(properties.count)\n"
-    }
+
 }
 
 class Weak<T: AnyObject> {

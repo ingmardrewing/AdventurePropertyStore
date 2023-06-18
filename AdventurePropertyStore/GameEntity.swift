@@ -13,6 +13,7 @@ class GameEntity :Equatable {
     let id : String
     var properties :[Property] = []
     var descriptions :[DescriptionContent] = []
+    var location :GameEntity?
     
     static func == (lhs: GameEntity, rhs: GameEntity) -> Bool {
         lhs.id == rhs.id
@@ -30,6 +31,8 @@ class GameEntity :Equatable {
     func updateDescriptions () {
         self.descriptions = getDescriptionContents()
     }
+    
+
     
     // Properties
     func createInitialProperty (valueType:ValueType, valueAmount:Int) {
@@ -64,6 +67,20 @@ class GameEntity :Equatable {
     
     
     // Descriptions
+    
+    func describe () {
+        print(getDescriptionContents().first?.text ?? "- no description on \(id) -")
+    }
+    
+    func addDescription (text :String,
+                         image :String? = "",
+                         imageText :String? = "",
+                         vignette :String? = "",
+                         conditions :[Condition]) {
+        let descriptionContent = DescriptionContent(text: text, image: image!, imageText: imageText!, vignette: vignette!)
+        DescriptionStore.add(description: Description(conditions: conditions, content: descriptionContent, target: self))
+    }
+    
     func getDescriptionContents() -> [DescriptionContent] {
         self.getDescriptionCollector().descriptionContents
     }

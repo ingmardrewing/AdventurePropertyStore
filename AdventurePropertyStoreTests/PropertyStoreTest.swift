@@ -9,6 +9,14 @@ import XCTest
 
 final class PropertyStoreTest: XCTestCase {
     
+    override func setUpWithError() throws {
+        Game.clearAll()
+    }
+
+    override func tearDownWithError() throws {
+        Game.clearAll()
+    }
+    
     func testUnsetProperties() throws {
         let legolas = GameEntity(name: "Legolas", id: "npc01")
         XCTAssertEqual(legolas.getPropertyValue(valueType: .Dexterity), 0)

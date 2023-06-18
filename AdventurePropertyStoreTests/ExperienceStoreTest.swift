@@ -9,6 +9,14 @@ import XCTest
 
 final class ExperienceStoreTest: XCTestCase {
     
+    override func setUpWithError() throws {
+        Game.clearAll()
+    }
+
+    override func tearDownWithError() throws {
+        Game.clearAll()
+    }
+    
     func testNoExperience() throws {
         let legolas = GameEntity(name: "Legolas", id: "npc01")
                 

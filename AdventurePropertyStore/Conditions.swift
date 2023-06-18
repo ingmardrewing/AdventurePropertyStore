@@ -16,28 +16,34 @@ struct Condition {
     let compareMode: CompareMode
     let comparedValue : Int
     let experienceTag : String
+    let targetFunction : () -> GameEntity
     
-    init(_ valueType: ValueType, _ compareMode: CompareMode, _ comparedValue: Int? = 0, _ experienceTag: String? = ""){
+    init(_ valueType: ValueType, _ compareMode: CompareMode, _ comparedValue: Int? = 0, _ experienceTag: String? = "", targetFunction :@escaping () -> GameEntity){
         self.valueType = valueType
         self.compareMode = compareMode
         self.comparedValue = comparedValue!
         self.experienceTag = experienceTag!
+        self.targetFunction = targetFunction
     }
 
-    func evaluate(gameEntity: GameEntity) -> Bool {
+    func evaluate() -> Bool {
+        let target = targetFunction()
+        print("xxx Evaluating for \(target.id):\nvalueType:\(valueType)\ncompareMode:\(compareMode)\ncompareValue:\(comparedValue)")
+        
         switch compareMode {
         case .equalOrGreaterThan:
-            return gameEntity.getPropertyValue(valueType: valueType) >= comparedValue
+            return target.getPropertyValue(valueType: valueType) >= comparedValue
         case .equalOrLessThan:
-            return gameEntity.getPropertyValue(valueType: valueType) <= comparedValue
+            return target.getPropertyValue(valueType: valueType) <= comparedValue
         case .equalTo:
-            return gameEntity.getPropertyValue(valueType: valueType) == comparedValue
+            return target.getPropertyValue(valueType: valueType) == comparedValue
         case .greaterThan:
-            return gameEntity.getPropertyValue(valueType: valueType) > comparedValue
+            return target.getPropertyValue(valueType: valueType) > comparedValue
         case .lessThan:
-            return gameEntity.getPropertyValue(valueType: valueType) < comparedValue
+            return target.getPropertyValue(valueType: valueType) < comparedValue
         case .includes:
-            return gameEntity.hasExperience(experienceTag: experienceTag)
+            return target.hasExperience(experienceTag: experienceTag)
         }
     }
 }
+

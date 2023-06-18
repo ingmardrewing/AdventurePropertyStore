@@ -10,6 +10,10 @@ import Foundation
 class DescriptionStore {
     static var descriptions :[Description] = []
     
+    static func clearAll () {
+        DescriptionStore.descriptions = []
+    }
+    
     static func add (description: Description) {
         descriptions.append(description)
     }
@@ -47,7 +51,7 @@ class Description {
 
     func evaluate() -> Bool {
         for c in conditions {
-            if !c.evaluate(gameEntity: target){
+            if !c.evaluate(){
                 return false
             }
         }

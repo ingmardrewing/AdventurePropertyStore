@@ -10,6 +10,10 @@ import Foundation
 class ExperienceStore {
     static var experiences : [Experience] = []
     
+    static func clearAll () {
+        ExperienceStore.experiences = []
+    }
+    
     static func addExperience(gameEntity:GameEntity, experience :String) {
         if (gameEntity.hasExperience(experienceTag: experience)){
             return

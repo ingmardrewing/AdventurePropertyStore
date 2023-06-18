@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		214DED142A10257F0005A176 /* ExperienceStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214DED132A10257F0005A176 /* ExperienceStore.swift */; };
 		214DED152A10C34D0005A176 /* ExperienceStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214DED132A10257F0005A176 /* ExperienceStore.swift */; };
+		21BAEF6C2A2B3364004278F2 /* Options.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BAEF6B2A2B3364004278F2 /* Options.swift */; };
+		21BAEF6E2A2B3E40004278F2 /* GameTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BAEF6D2A2B3E40004278F2 /* GameTest.swift */; };
+		21BAEF6F2A2B3E57004278F2 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DE1CDD2A237A3A00629C6A /* Game.swift */; };
+		21BAEF702A2B4902004278F2 /* Options.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BAEF6B2A2B3364004278F2 /* Options.swift */; };
 		21DE1CDE2A237A3A00629C6A /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DE1CDD2A237A3A00629C6A /* Game.swift */; };
 		956E091229FD0D3700133553 /* AdventurePropertyStoreApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956E091129FD0D3700133553 /* AdventurePropertyStoreApp.swift */; };
 		956E091429FD0D3700133553 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956E091329FD0D3700133553 /* Persistence.swift */; };
@@ -16,8 +20,6 @@
 		956E091929FD0D3700133553 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956E091829FD0D3700133553 /* ContentView.swift */; };
 		956E091B29FD0D3800133553 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 956E091A29FD0D3800133553 /* Assets.xcassets */; };
 		956E091F29FD0D3800133553 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 956E091E29FD0D3800133553 /* Preview Assets.xcassets */; };
-		956E093329FD0D3800133553 /* AdventurePropertyStoreUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956E093229FD0D3800133553 /* AdventurePropertyStoreUITests.swift */; };
-		956E093529FD0D3800133553 /* AdventurePropertyStoreUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956E093429FD0D3800133553 /* AdventurePropertyStoreUITestsLaunchTests.swift */; };
 		956E094229FD0D7300133553 /* PropertyStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956E094129FD0D7300133553 /* PropertyStore.swift */; };
 		956E094629FD109800133553 /* GameEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956E094529FD109800133553 /* GameEntity.swift */; };
 		956E094729FD28E200133553 /* GameEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956E094529FD109800133553 /* GameEntity.swift */; };
@@ -40,17 +42,12 @@
 			remoteGlobalIDString = 956E090D29FD0D3700133553;
 			remoteInfo = AdventurePropertyStore;
 		};
-		956E092F29FD0D3800133553 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 956E090629FD0D3700133553 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 956E090D29FD0D3700133553;
-			remoteInfo = AdventurePropertyStore;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		214DED132A10257F0005A176 /* ExperienceStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperienceStore.swift; sourceTree = "<group>"; };
+		21BAEF6B2A2B3364004278F2 /* Options.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Options.swift; sourceTree = "<group>"; };
+		21BAEF6D2A2B3E40004278F2 /* GameTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTest.swift; sourceTree = "<group>"; };
 		21DE1CDD2A237A3A00629C6A /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		956E090E29FD0D3700133553 /* AdventurePropertyStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AdventurePropertyStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		956E091129FD0D3700133553 /* AdventurePropertyStoreApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdventurePropertyStoreApp.swift; sourceTree = "<group>"; };
@@ -61,9 +58,6 @@
 		956E091C29FD0D3800133553 /* AdventurePropertyStore.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AdventurePropertyStore.entitlements; sourceTree = "<group>"; };
 		956E091E29FD0D3800133553 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		956E092429FD0D3800133553 /* AdventurePropertyStoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AdventurePropertyStoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		956E092E29FD0D3800133553 /* AdventurePropertyStoreUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AdventurePropertyStoreUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		956E093229FD0D3800133553 /* AdventurePropertyStoreUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdventurePropertyStoreUITests.swift; sourceTree = "<group>"; };
-		956E093429FD0D3800133553 /* AdventurePropertyStoreUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdventurePropertyStoreUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		956E094129FD0D7300133553 /* PropertyStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyStore.swift; sourceTree = "<group>"; };
 		956E094529FD109800133553 /* GameEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameEntity.swift; sourceTree = "<group>"; };
 		956E094A29FD3B7100133553 /* PropertyStoreTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyStoreTest.swift; sourceTree = "<group>"; };
@@ -89,13 +83,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		956E092B29FD0D3800133553 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -104,7 +91,6 @@
 			children = (
 				956E091029FD0D3700133553 /* AdventurePropertyStore */,
 				956E092729FD0D3800133553 /* AdventurePropertyStoreTests */,
-				956E093129FD0D3800133553 /* AdventurePropertyStoreUITests */,
 				956E090F29FD0D3700133553 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -114,7 +100,6 @@
 			children = (
 				956E090E29FD0D3700133553 /* AdventurePropertyStore.app */,
 				956E092429FD0D3800133553 /* AdventurePropertyStoreTests.xctest */,
-				956E092E29FD0D3800133553 /* AdventurePropertyStoreUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -132,6 +117,7 @@
 				956E094529FD109800133553 /* GameEntity.swift */,
 				21DE1CDD2A237A3A00629C6A /* Game.swift */,
 				956E094E29FF91ED00133553 /* Conditions.swift */,
+				21BAEF6B2A2B3364004278F2 /* Options.swift */,
 				956E094C29FD427900133553 /* Description.swift */,
 				956E094129FD0D7300133553 /* PropertyStore.swift */,
 				214DED132A10257F0005A176 /* ExperienceStore.swift */,
@@ -154,17 +140,9 @@
 				956E095029FF923100133553 /* ConditionsTest.swift */,
 				956E095329FF960600133553 /* DescriptionTest.swift */,
 				95FEBF0E2A0F70AE00303C67 /* ExperienceStoreTest.swift */,
+				21BAEF6D2A2B3E40004278F2 /* GameTest.swift */,
 			);
 			path = AdventurePropertyStoreTests;
-			sourceTree = "<group>";
-		};
-		956E093129FD0D3800133553 /* AdventurePropertyStoreUITests */ = {
-			isa = PBXGroup;
-			children = (
-				956E093229FD0D3800133553 /* AdventurePropertyStoreUITests.swift */,
-				956E093429FD0D3800133553 /* AdventurePropertyStoreUITestsLaunchTests.swift */,
-			);
-			path = AdventurePropertyStoreUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,24 +183,6 @@
 			productReference = 956E092429FD0D3800133553 /* AdventurePropertyStoreTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		956E092D29FD0D3800133553 /* AdventurePropertyStoreUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 956E093E29FD0D3800133553 /* Build configuration list for PBXNativeTarget "AdventurePropertyStoreUITests" */;
-			buildPhases = (
-				956E092A29FD0D3800133553 /* Sources */,
-				956E092B29FD0D3800133553 /* Frameworks */,
-				956E092C29FD0D3800133553 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				956E093029FD0D3800133553 /* PBXTargetDependency */,
-			);
-			name = AdventurePropertyStoreUITests;
-			productName = AdventurePropertyStoreUITests;
-			productReference = 956E092E29FD0D3800133553 /* AdventurePropertyStoreUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -237,10 +197,6 @@
 						CreatedOnToolsVersion = 14.3;
 					};
 					956E092329FD0D3800133553 = {
-						CreatedOnToolsVersion = 14.3;
-						TestTargetID = 956E090D29FD0D3700133553;
-					};
-					956E092D29FD0D3800133553 = {
 						CreatedOnToolsVersion = 14.3;
 						TestTargetID = 956E090D29FD0D3700133553;
 					};
@@ -261,7 +217,6 @@
 			targets = (
 				956E090D29FD0D3700133553 /* AdventurePropertyStore */,
 				956E092329FD0D3800133553 /* AdventurePropertyStoreTests */,
-				956E092D29FD0D3800133553 /* AdventurePropertyStoreUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -283,13 +238,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		956E092C29FD0D3800133553 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -301,6 +249,7 @@
 				21DE1CDE2A237A3A00629C6A /* Game.swift in Sources */,
 				214DED142A10257F0005A176 /* ExperienceStore.swift in Sources */,
 				956E094F29FF91ED00133553 /* Conditions.swift in Sources */,
+				21BAEF6C2A2B3364004278F2 /* Options.swift in Sources */,
 				956E094229FD0D7300133553 /* PropertyStore.swift in Sources */,
 				956E094629FD109800133553 /* GameEntity.swift in Sources */,
 				956E091229FD0D3700133553 /* AdventurePropertyStoreApp.swift in Sources */,
@@ -318,20 +267,14 @@
 				956E095429FF960600133553 /* DescriptionTest.swift in Sources */,
 				956E094829FD28E600133553 /* PropertyStore.swift in Sources */,
 				956E094729FD28E200133553 /* GameEntity.swift in Sources */,
+				21BAEF702A2B4902004278F2 /* Options.swift in Sources */,
 				956E095529FF964200133553 /* Description.swift in Sources */,
 				95FEBF0F2A0F70AE00303C67 /* ExperienceStoreTest.swift in Sources */,
+				21BAEF6F2A2B3E57004278F2 /* Game.swift in Sources */,
 				956E094B29FD3B7100133553 /* PropertyStoreTest.swift in Sources */,
+				21BAEF6E2A2B3E40004278F2 /* GameTest.swift in Sources */,
 				956E095129FF923100133553 /* ConditionsTest.swift in Sources */,
 				214DED152A10C34D0005A176 /* ExperienceStore.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		956E092A29FD0D3800133553 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				956E093529FD0D3800133553 /* AdventurePropertyStoreUITestsLaunchTests.swift in Sources */,
-				956E093329FD0D3800133553 /* AdventurePropertyStoreUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,11 +285,6 @@
 			isa = PBXTargetDependency;
 			target = 956E090D29FD0D3700133553 /* AdventurePropertyStore */;
 			targetProxy = 956E092529FD0D3800133553 /* PBXContainerItemProxy */;
-		};
-		956E093029FD0D3800133553 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 956E090D29FD0D3700133553 /* AdventurePropertyStore */;
-			targetProxy = 956E092F29FD0D3800133553 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -576,48 +514,6 @@
 			};
 			name = Release;
 		};
-		956E093F29FD0D3800133553 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
-				MACOSX_DEPLOYMENT_TARGET = 13.3;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = drewing.AdventurePropertyStoreUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = AdventurePropertyStore;
-			};
-			name = Debug;
-		};
-		956E094029FD0D3800133553 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
-				MACOSX_DEPLOYMENT_TARGET = 13.3;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = drewing.AdventurePropertyStoreUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = AdventurePropertyStore;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -644,15 +540,6 @@
 			buildConfigurations = (
 				956E093C29FD0D3800133553 /* Debug */,
 				956E093D29FD0D3800133553 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		956E093E29FD0D3800133553 /* Build configuration list for PBXNativeTarget "AdventurePropertyStoreUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				956E093F29FD0D3800133553 /* Debug */,
-				956E094029FD0D3800133553 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
